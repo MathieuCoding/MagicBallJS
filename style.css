@@ -1,27 +1,35 @@
-*
-{
- box-sizing: border-box;
-}  
-    
-body
-{
-margin: 0;
+* {
+    box-sizing: border-box;
 }
 
-.container 
-{
-    width: 100vw;
+body {
+    margin: 0;
+    background: url("adrian-curiel-1XVpwAHlSNs-unsplash.jpg") no-repeat center center fixed;
+    /* -webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover; */
+    background-size: cover;
+}
+
+h1 {
+    font-size: 48px;
+    text-shadow: -1px -1px #f00, 1px 1px #a00, -3px 0 4px #000;
+    font-family: "Segoe print", Arial, Helvetica, sans-serif;
+    color: #dd0000;
+    margin: 20px 0 0;
+}
+
+.container {
+    width: 90vw;
     height: auto;
     margin: 0;
 }
 
-.text-center 
-{
+.text-center {
     text-align: center;
 }
 
-.square 
-{
+.square {
     background-image: url("football.png");
     background-repeat: no-repeat no-repeat;
     background-size: contain;
@@ -30,46 +38,42 @@ margin: 0;
     position: relative;
 }
 
-#btns
-{
-    margin-top: 5%;
+#btns {
+    margin-top: 2%;
 }
 
-button 
-{
+button {
     margin-left: 20px;
     border-radius: 5px;
     width: 200px;
     height: 60px;
 }
 
-.footballPitch
-{
+.footballPitch {
     display: flex;
 }
-.posts 
-{
+
+.posts {
     margin-top: 10%;
     background-image: url("footballPosts.png");
     background-repeat: no-repeat no-repeat;
     background-size: contain;
-    height: 100vh;
+    height: 60vh;
     width: 30vw;
 }
 
-.posts2
-{
+.posts2 {
     margin-top: 10%;
     margin-right: 0;
     background-image: url("footballPosts.png");
     background-repeat: no-repeat no-repeat;
     background-size: contain;
-    height: 100vh;
+    height: 60vh;
     width: 30vw;
     -webkit-transform: scaleX(-1);
-     /* transform: scaleX(-1); */
+    /* transform: scaleX(-1); */
     position: relative;
-     left: 30vw;
-     z-index: -1;
+    left: 30vw;
+    z-index: -1;
 
 }

@@ -43,7 +43,7 @@ let reset = document.getElementById('reset');
 square.style.height = '100px';
 square.style.width = '100px';
 square.style.left = '50%';
-square.style.top = '40vh';
+square.style.top = '50%';
 
 function sizeIncrease()
 {
@@ -51,6 +51,11 @@ function sizeIncrease()
     let newWidth = parseInt(square.style.width) + 20;
     square.style.height = newHeight + 'px';
     square.style.width = newWidth + 'px';
+
+    let newXPosition = parseInt(square.style.left) - 1;
+    let newYPosition = parseInt(square.style.top) - 1;
+    square.style.left = newXPosition + '%';
+    square.style.top = newYPosition + '%';
 }
 
 function colorToGreen()
@@ -60,13 +65,15 @@ function colorToGreen()
 
 function disappearSquare()
 {
-    square.style.backgroundImage = "url('')";
+    // square.style.backgroundImage = "url('')";
+    square.style.display = 'none';
 
 }
 
 function reappearSquare()
 {
-    square.style.backgroundImage = "url('football.png')";
+    // square.style.backgroundImage = "url('football.png')";
+    square.style.display = 'block';
 }
 
 function refreshPage()
@@ -76,23 +83,23 @@ function refreshPage()
 
 function moveRightFunc()
 {
-    let newPosition = parseInt(square.style.left) + 1;
+    let newPosition = parseInt(square.style.left) + 2;
     square.style.left = newPosition + '%';
 }
 function moveLeftFunc()
 {
-    let newPosition = parseInt(square.style.left) - 1;
+    let newPosition = parseInt(square.style.left) - 2;
     square.style.left = newPosition + '%';
 }
 function moveUpFunc()
 {
-    let newPosition = parseInt(square.style.top) - 1;
-    square.style.top = newPosition + 'vh';
+    let newPosition = parseInt(square.style.top) - 2;
+    square.style.top = newPosition + '%';
 }
 function moveDownFunc()
 {
-    let newPosition = parseInt(square.style.top) + 1;
-    square.style.top = newPosition + 'vh';
+    let newPosition = parseInt(square.style.top) + 2;
+    square.style.top = newPosition + '%';
 }
 
 
@@ -111,15 +118,27 @@ window.addEventListener("keydown", function(event)
     }
     if (event.code === "ArrowRight")
     {
+        if (parseInt(square.style.left) < 90)
+        {
         moveRightFunc();
+        }
     } else if (event.code === "ArrowLeft")
     {
+        if (parseInt(square.style.left) > 0)
+        {
         moveLeftFunc();
+        }
     } else if (event.code === "ArrowDown")
     {
+        if (parseInt(square.style.top) < 90)
+        {
         moveDownFunc();
+        }
     } else if (event.code === "ArrowUp")
     {
+        if (parseInt(square.style.top) > 0)
+        {
         moveUpFunc();
+        }
     }
 })

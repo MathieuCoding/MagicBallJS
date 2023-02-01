@@ -33,9 +33,7 @@ h1 {
     background-image: url("football.png");
     background-repeat: no-repeat no-repeat;
     background-size: contain;
-    height: 100px;
-    width: 100px;
-    position: relative;
+    position: absolute;
 }
 
 #btns {

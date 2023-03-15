@@ -32,6 +32,17 @@ const formateur =
 }
 
 
+// Afficher les tables de multiplication de 1 à 10
+for (let i = 1; i < 10 ; i++)
+{
+    for (let j = 1; j < 10 ; j++)
+    {
+        console.log(i + " times " + j + " equal " + i * j);
+    }
+}
+
+
+
 // Exercice carré
 let square = document.querySelector('.square');
 let height = document.getElementById('height');
@@ -44,6 +55,7 @@ square.style.height = '100px';
 square.style.width = '100px';
 square.style.left = '50%';
 square.style.top = '50%';
+square.style.margin = '0';
 
 function sizeIncrease()
 {
@@ -141,4 +153,11 @@ window.addEventListener("keydown", function(event)
         moveUpFunc();
         }
     }
-})
+});
+
+
+
+
+
+
+

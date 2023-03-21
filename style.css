@@ -13,7 +13,7 @@ body {
 h1 {
     font-size: 48px;
     text-shadow: -1px -1px #000, 1px 1px #000, -3px 0 4px #000;
-    font-family: "Segoe print", Arial, Helvetica, Monserrat, sans-serif;
+    font-family: "Segoe print", Arial, Helvetica, monospace, sans-serif;
     color: greenyellow;
     margin: 20px 0 0;
 }
